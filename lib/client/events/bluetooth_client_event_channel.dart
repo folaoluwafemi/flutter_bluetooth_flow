@@ -1,4 +1,4 @@
-part of 'bluetooth_server_platform_interface.dart';
+part of 'bluetooth_client_platform_interface.dart';
 
 final class BluetoothClientEventChannel
     extends BluetoothClientPlatformInterface {
