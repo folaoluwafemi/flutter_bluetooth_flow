@@ -1,6 +1,12 @@
 part of 'bluetooth_client_interface.dart';
 
 final class BluetoothClient implements BluetoothClientInterface {
+  BluetoothClient._();
+
+  static final BluetoothClient _instance = BluetoothClient._();
+
+  factory BluetoothClient() => _instance;
+
   final _methods = BluetoothClientMethodChannel();
   final _events = BluetoothClientEventChannel();
 

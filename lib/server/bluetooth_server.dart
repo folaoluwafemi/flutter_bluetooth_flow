@@ -1,6 +1,12 @@
 part of 'bluetooth_server_interface.dart';
 
 final class BluetoothServer implements BluetoothServerInterface {
+  BluetoothServer._();
+
+  static final BluetoothServer _instance = BluetoothServer._();
+
+  factory BluetoothServer() => _instance;
+
   final BluetoothServerMethodsInterface _methods =
       BluetoothServerMethodChannel();
   final BluetoothServerEventInterface _events = BluetoothServerEventChannel();
