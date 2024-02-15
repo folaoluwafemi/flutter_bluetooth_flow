@@ -7,18 +7,18 @@ part 'bluetooth_client_method_channel.dart';
 
 part 'enum_enhanced_client_method_channel.dart';
 
-abstract base class BluetoothClientPlatformInterface extends PlatformInterface {
+abstract base class BluetoothClientMethodsInterface extends PlatformInterface {
   /// Constructs a BluetoothClientPlatformInterface.
-  BluetoothClientPlatformInterface() : super(token: _token);
+  BluetoothClientMethodsInterface() : super(token: _token);
 
   static final Object _token = Object();
 
-  static BluetoothClientPlatformInterface _instance =
+  static BluetoothClientMethodsInterface _instance =
       BluetoothClientMethodChannel();
 
-  static BluetoothClientPlatformInterface get instance => _instance;
+  static BluetoothClientMethodsInterface get instance => _instance;
 
-  static set instance(BluetoothClientPlatformInterface instance) {
+  static set instance(BluetoothClientMethodsInterface instance) {
     PlatformInterface.verifyToken(instance, _token);
     _instance = instance;
   }

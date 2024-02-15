@@ -1,7 +1,7 @@
 part of 'bluetooth_client_platform_interface.dart';
 
 final class EnumEnhancedBluetoothClientMethodChannel
-    extends BluetoothClientPlatformInterface {
+    extends BluetoothClientMethodsInterface {
   final methodChannel = const MethodChannel(
     'com.dartgod/bluetooth_client_methods',
   );
