@@ -35,7 +35,7 @@ abstract base class BluetoothClientPlatformInterface extends PlatformInterface {
     throw UnimplementedError('disconnect() has not been implemented.');
   }
 
-  Future<void> connect(String deviceUUID) {
+  Future<void> connect(String deviceAddress) {
     throw UnimplementedError('connect() has not been implemented.');
   }
 

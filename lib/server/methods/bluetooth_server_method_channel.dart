@@ -1,7 +1,7 @@
 part of 'bluetooth_server_platform_interface.dart';
 
 final class BluetoothServerMethodChannel
-    extends BluetoothServerPlatformInterface {
+    extends BluetoothServerMethodsInterface {
   final methodChannel = const MethodChannel(
     'com.dartgod/bluetooth_server_methods',
   );

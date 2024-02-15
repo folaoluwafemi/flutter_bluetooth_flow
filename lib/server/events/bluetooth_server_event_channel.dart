@@ -1,6 +1,6 @@
 part of 'bluetooth_server_platform_interface.dart';
 
-final class BluetoothServerEventChannel extends BluetoothServerPlatformInterface {
+final class BluetoothServerEventChannel extends BluetoothServerEventInterface {
   BluetoothServerEventChannel() : super();
   final EventChannel onDataReceivedChannel = const EventChannel(
     'com.dartgod/server_data_event_channel',

@@ -5,18 +5,18 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 part 'bluetooth_server_method_channel.dart';
 part 'explicit_bluetooth_server_method_channel.dart';
 
-abstract base class BluetoothServerPlatformInterface extends PlatformInterface {
+abstract base class BluetoothServerMethodsInterface extends PlatformInterface {
   /// Constructs a BluetoothServerPlatformInterface.
-  BluetoothServerPlatformInterface() : super(token: _token);
+  BluetoothServerMethodsInterface() : super(token: _token);
 
   static final Object _token = Object();
 
-  static BluetoothServerPlatformInterface _instance =
+  static BluetoothServerMethodsInterface _instance =
       BluetoothServerMethodChannel();
 
-  static BluetoothServerPlatformInterface get instance => _instance;
+  static BluetoothServerMethodsInterface get instance => _instance;
 
-  static set instance(BluetoothServerPlatformInterface instance) {
+  static set instance(BluetoothServerMethodsInterface instance) {
     PlatformInterface.verifyToken(instance, _token);
     _instance = instance;
   }

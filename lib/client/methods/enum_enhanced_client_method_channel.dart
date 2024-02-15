@@ -38,10 +38,10 @@ final class EnumEnhancedBluetoothClientMethodChannel
   }
 
   @override
-  Future<void> connect(String deviceUUID) async {
+  Future<void> connect(String deviceAddress) async {
     try {
       const method = BluetoothClientMethod.connect;
-      await method.call(methodChannel, param: null);
+      await method.call(methodChannel, param: deviceAddress);
     } catch (e) {
       throw 'Unable to call connect method. Error: $e';
     }

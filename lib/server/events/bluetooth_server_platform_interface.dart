@@ -3,17 +3,17 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 part 'bluetooth_server_event_channel.dart';
 
-abstract base class BluetoothServerPlatformInterface extends PlatformInterface {
-  static BluetoothServerPlatformInterface _instance =
+abstract base class BluetoothServerEventInterface extends PlatformInterface {
+  static BluetoothServerEventInterface _instance =
       BluetoothServerEventChannel();
 
-  BluetoothServerPlatformInterface() : super(token: _token);
+  BluetoothServerEventInterface() : super(token: _token);
 
   static final Object _token = Object();
 
-  static BluetoothServerPlatformInterface get instance => _instance;
+  static BluetoothServerEventInterface get instance => _instance;
 
-  static set instance(BluetoothServerPlatformInterface instance) {
+  static set instance(BluetoothServerEventInterface instance) {
     _instance = instance;
   }
 
