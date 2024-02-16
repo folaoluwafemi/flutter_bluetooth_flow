@@ -14,7 +14,7 @@ final class BluetoothClient implements BluetoothClientInterface {
   Stream<Uint8List> get messageStream => _events.onDataReceived;
 
   @override
-  Stream<bool> get onConnected => _events.onConnected;
+  Stream<bool> get onConnectedStream => _events.onConnected;
 
   @override
   Stream<BluetoothDevice> get onDeviceDiscovered => _events.onScanDevice;
@@ -48,7 +48,7 @@ final class BluetoothClient implements BluetoothClientInterface {
   }
 
   @override
-  Future<void> send(Uint8List data) async {
+  Future<void> sendMessage(Uint8List data) async {
     await _methods.send(data);
   }
 

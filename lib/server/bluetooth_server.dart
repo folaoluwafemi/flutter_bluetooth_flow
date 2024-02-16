@@ -15,7 +15,7 @@ final class BluetoothServer implements BluetoothServerInterface {
   Stream<Uint8List> get messageStream => _events.onDataReceived;
 
   @override
-  Stream<bool> get onConnected => _events.onConnected;
+  Stream<bool> get onConnectedStream => _events.onConnected;
 
   @override
   Future<void> dispose() async {
@@ -33,8 +33,8 @@ final class BluetoothServer implements BluetoothServerInterface {
   }
 
   @override
-  Future<void> sendToClient(Uint8List message) async {
-    await _methods.send(message);
+  Future<void> sendMessage(Uint8List data) async {
+    await _methods.send(data);
   }
 
   @override
