@@ -1,0 +1,3 @@
+package com.dartgod.flutter_bluetooth_flow.data
+
+class BluetoothViewModel
