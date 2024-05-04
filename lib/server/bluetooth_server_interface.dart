@@ -7,12 +7,13 @@ import 'package:flutter_bluetooth_flow/server/methods/bluetooth_server_platform_
 part 'bluetooth_server.dart';
 
 abstract interface class BluetoothServerInterface extends BluetoothInterface {
-
   Future<void> initialize();
 
   Future<void> updateServerUUID(String uuidSeed);
 
   Future<void> startServer();
+
+  Future<void> startAdvertising();
 
   Future<void> stopServer();
 }

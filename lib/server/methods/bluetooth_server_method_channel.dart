@@ -59,6 +59,16 @@ final class BluetoothServerMethodChannel
   }
 
   @override
+  Future<void> startAdvertising([int? secondDuration]) async {
+    try {
+      const method = BluetoothServerMethod.startAdvertising;
+      await method.call(methodChannel, param: secondDuration);
+    } catch (e) {
+      throw 'Unable to call startAdvertising method. Error: $e';
+    }
+  }
+
+  @override
   Future<void> send(Uint8List data) async {
     try {
       const method = BluetoothServerMethod.send;

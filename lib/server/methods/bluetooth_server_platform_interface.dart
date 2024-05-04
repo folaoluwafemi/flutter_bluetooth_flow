@@ -3,6 +3,7 @@ import 'package:flutter_bluetooth_flow/server/methods/bluetooth_server_methods.d
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 part 'bluetooth_server_method_channel.dart';
+
 part 'explicit_bluetooth_server_method_channel.dart';
 
 abstract base class BluetoothServerMethodsInterface extends PlatformInterface {
@@ -39,6 +40,10 @@ abstract base class BluetoothServerMethodsInterface extends PlatformInterface {
 
   Future<void> stopServer() {
     throw UnimplementedError('stopServer() has not been implemented.');
+  }
+
+  Future<void> startAdvertising([int? secondDuration]) {
+    throw UnimplementedError('startAdvertising() has not been implemented.');
   }
 
   Future<void> send(Uint8List data) {

@@ -6,6 +6,7 @@ abstract final class BluetoothServerMethods {
   static const String isBluetoothEnabled = 'isBluetoothEnabled';
   static const String startServer = 'startServer';
   static const String stopServer = 'stopServer';
+  static const String startAdvertising = 'start_advertising';
   static const String send = 'send';
   static const String dispose = 'release';
 }
@@ -30,6 +31,10 @@ enum BluetoothServerMethod<ReturnType, ParamType> {
   stopServer<void, void>(
     BluetoothServerMethods.stopServer,
     null,
+  ),
+  startAdvertising<void, int?>(
+    BluetoothServerMethods.stopServer,
+    'secondDuration',
   ),
   send<void, Uint8List>(
     BluetoothServerMethods.send,

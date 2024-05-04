@@ -63,6 +63,18 @@ final class ExplicitBluetoothServerMethodChannel
   }
 
   @override
+  Future<void> startAdvertising([int? secondDuration]) async {
+    try {
+      await methodChannel.invokeMethod(
+        BluetoothServerMethods.startAdvertising,
+        {'secondDuration': secondDuration},
+      );
+    } catch (e) {
+      throw 'Unable to call startAdvertising method. Error: $e';
+    }
+  }
+
+  @override
   Future<void> send(Uint8List data) async {
     try {
       await methodChannel.invokeMethod(

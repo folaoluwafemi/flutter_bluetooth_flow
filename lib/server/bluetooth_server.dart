@@ -8,7 +8,7 @@ final class BluetoothServer implements BluetoothServerInterface {
   factory BluetoothServer() => _instance;
 
   final BluetoothServerMethodsInterface _methods =
-      BluetoothServerMethodChannel();
+  BluetoothServerMethodChannel();
   final BluetoothServerEventInterface _events = BluetoothServerEventChannel();
 
   @override
@@ -40,6 +40,11 @@ final class BluetoothServer implements BluetoothServerInterface {
   @override
   Future<void> startServer() async {
     await _methods.startServer();
+  }
+
+  @override
+  Future<void> startAdvertising([int? secondDuration]) async {
+    await _methods.startAdvertising(secondDuration);
   }
 
   @override
